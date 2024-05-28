@@ -8,7 +8,6 @@ from langchain.chains import LLMChain
 from langchain.llms import OpenAI
 
 # Initialize OpenAI with your API key
-os.environ["OPENAI_API_KEY"]  = "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"
 llm = ChatOpenAI(model="gpt-4-turbo",temperature=0.5)
 
 # data = pd.read_csv('merged.csv')
