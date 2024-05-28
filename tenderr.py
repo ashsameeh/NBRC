@@ -8,6 +8,7 @@ from langchain.utilities import SQLDatabase
 from langchain.agents.agent_toolkits import SQLDatabaseToolkit
 import openai
 import os
+import streamlit as st
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
