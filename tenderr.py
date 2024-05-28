@@ -118,14 +118,14 @@ def identify_table_prompt(user_query):
     return prompt
 
 def make_output(user_query):
-    try:
+    # try:
         detailed_prompt = identify_table_prompt(user_query)
         agent_executor = create_sql_agent(llm, db=db, verbose=True)
         result = agent_executor.invoke(detailed_prompt)
         final_answer = result['output']
         return final_answer
-    except Exception as e:
-        return "I'm sorry, I encountered an error while trying to answer your question. Please try again later."
+    # except Exception as e:
+    #     return "I'm sorry, I encountered an error while trying to answer your question. Please try again later."
 
 
 # user_query = "What is the acknowledgment status for tender with id NB32056724_21525?"
