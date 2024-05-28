@@ -125,7 +125,7 @@ def identify_table_prompt(user_query):
 def make_output(user_query):
     # try:
         detailed_prompt = identify_table_prompt(user_query)
-        agent_executor = create_sql_agent(verbose=True,toolkit=SQLDatabaseToolkit(db=db, llm=llm))
+        agent_executor = create_sql_agent(llm=llm,verbose=True,toolkit=SQLDatabaseToolkit(db=db, llm=llm))
         result = agent_executor.run(detailed_prompt)
         final_answer = result['output']
         return final_answer
