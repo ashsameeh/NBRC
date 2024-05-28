@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 # Initialize OpenAI with your API key
-os.environ["OPENAI_API_KEY"] = "dummy"
+os.environ["OPENAI_API_KEY"] = "sk-proj-ucvEKw65JcN4ela3wTzFT3BlbkFJAk5u8UR6MQhea88Rhzq"
 llm = ChatOpenAI(model="gpt-4-turbo", temperature=0.5)
 
 # Database configuration
