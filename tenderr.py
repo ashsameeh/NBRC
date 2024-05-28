@@ -1,7 +1,7 @@
 # from langchain_community.agent_toolkits import create_sql_agent
 from langchain.agents import create_sql_agent
-from langchain.llms import OpenAI
-# from langchain_openai import ChatOpenAI
+# from langchain.llms import OpenAI
+from langchain_openai import ChatOpenAI
 # from langchain_community.utilities import SQLDatabase
 # from langchain.chains.sql_database import SQLDatabase
 from langchain.utilities import SQLDatabase
@@ -16,8 +16,8 @@ from sqlalchemy.orm import sessionmaker
 # openai.api_key = os.getenv("OPENAI_API_KEY")
 # openai.api_key = st.secrets["OPENAI_API_KEY"]
 # Initialize OpenAI with your API key
-# llm = ChatOpenAI(model="gpt-4-turbo", temperature=0.5)
-llm = OpenAI(temperature=0.5, verbose=True,model="gpt-4-turbo")
+llm = ChatOpenAI(model="gpt-4-turbo", temperature=0.5)
+# llm = OpenAI(temperature=0.5, verbose=True,model="gpt-4-turbo")
 
 
 # Database configuration
