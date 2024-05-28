@@ -131,20 +131,8 @@ def make_output(user_query):
         result = agent_executor.run(detailed_prompt)
         final_answer = result['output']
         return final_answer
-    except openai.error.InvalidRequestError as e:
-        return f"Invalid request: {str(e)}"
-    except openai.error.AuthenticationError as e:
-        return f"Authentication error: {str(e)}"
-    except openai.error.APIConnectionError as e:
-        return f"API connection error: {str(e)}"
-    except openai.error.RateLimitError as e:
-        return f"Rate limit error: {str(e)}"
-    except openai.error.OpenAIError as e:
-        return f"OpenAI error: {str(e)}"
     except Exception as e:
-        return f"An unexpected error occurred: {str(e)}"    
-    # except Exception as e:
-    #     return "I'm sorry, I encountered an error while trying to answer your question. Please try again later."
+        return "I'm sorry, I encountered an error while trying to answer your question. Please try again later."
 
 
 # user_query = "What is the acknowledgment status for tender with id NB32056724_21525?"
