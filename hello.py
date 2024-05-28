@@ -2,6 +2,7 @@
 import streamlit as st  
 from tenderr import make_output
 import time
+from dotenv import load_dotenv
 
 
 # Set page configuration including title and icon
