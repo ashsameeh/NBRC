@@ -3,7 +3,8 @@ from langchain.agents import create_sql_agent
 from langchain.llms import OpenAI
 # from langchain_openai import ChatOpenAI
 # from langchain_community.utilities import SQLDatabase
-from langchain.chains.sql_database import SQLDatabase
+# from langchain.chains.sql_database import SQLDatabase
+from langchain.agents.agent_toolkits import SQLDatabaseToolkit
 import openai
 import os
 from sqlalchemy import create_engine
