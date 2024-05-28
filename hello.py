@@ -25,26 +25,26 @@ if prompt := st.chat_input("What is your question?"):
     # Append user input to session state
     st.session_state.messages.append({"role": "user", "content": prompt})
     
-    # with st.spinner("Thinking..."):
-    #     # Get response from the chatbot based on user input
-    #     response = make_output(prompt)
+    with st.spinner("Thinking..."):
+        # Get response from the chatbot based on user input
+        response = make_output(prompt)
     # Display a custom spinner while the chatbot thinks of an answer
     # Display a custom spinner while the chatbot thinks of an answer
-    spinner_placeholder = st.empty()
-    spinner_message = "Thinking"
-    spinner_steps = 3
+    # spinner_placeholder = st.empty()
+    # spinner_message = "Thinking"
+    # spinner_steps = 3
 
-    def update_spinner(spinner_placeholder, spinner_message, spinner_steps):
-        for i in range(spinner_steps):
-            spinner_placeholder.text(f"{spinner_message}{'.' * (i % 4)}")
-            time.sleep(0.5)
+    # def update_spinner(spinner_placeholder, spinner_message, spinner_steps):
+    #     for i in range(spinner_steps):
+    #         spinner_placeholder.text(f"{spinner_message}{'.' * (i % 4)}")
+    #         time.sleep(0.5)
 
-    update_spinner(spinner_placeholder, spinner_message, spinner_steps)
+    # update_spinner(spinner_placeholder, spinner_message, spinner_steps)
 
-    # Get response from the chatbot based on user input
-    response = make_output(prompt)
+    # # Get response from the chatbot based on user input
+    # response = make_output(prompt)
 
-    spinner_placeholder.empty()
+    # spinner_placeholder.empty()
     
     
     # Display response from the chatbot as a chat message
