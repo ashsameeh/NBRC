@@ -1,6 +1,7 @@
 # from langchain_community.agent_toolkits import create_sql_agent
 from langchain.agents import create_sql_agent
-from langchain_openai import ChatOpenAI
+from langchain.llms import OpenAI
+# from langchain_openai import ChatOpenAI
 # from langchain_community.utilities import SQLDatabase
 from langchain.chains.sql_database import SQLDatabase
 import openai
