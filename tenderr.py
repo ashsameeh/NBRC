@@ -125,12 +125,24 @@ def identify_table_prompt(user_query):
     return prompt
 
 def make_output(user_query):
-    # try:
-    detailed_prompt = identify_table_prompt(user_query)
-    agent_executor = create_sql_agent(llm=llm,verbose=True,db=db)
-    result = agent_executor.run(detailed_prompt)
-    final_answer = result['output']
-    return final_answer
+    try:
+        detailed_prompt = identify_table_prompt(user_query)
+        agent_executor = create_sql_agent(llm=llm,verbose=True,db=db)
+        result = agent_executor.run(detailed_prompt)
+        final_answer = result['output']
+        return final_answer
+    except openai.error.InvalidRequestError as e:
+        return f"Invalid request: {str(e)}"
+    except openai.error.AuthenticationError as e:
+        return f"Authentication error: {str(e)}"
+    except openai.error.APIConnectionError as e:
+        return f"API connection error: {str(e)}"
+    except openai.error.RateLimitError as e:
+        return f"Rate limit error: {str(e)}"
+    except openai.error.OpenAIError as e:
+        return f"OpenAI error: {str(e)}"
+    except Exception as e:
+        return f"An unexpected error occurred: {str(e)}"    
     # except Exception as e:
     #     return "I'm sorry, I encountered an error while trying to answer your question. Please try again later."
 
