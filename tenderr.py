@@ -22,6 +22,7 @@ DATABASE_URL = "sqlite:///nb.db"
 db = SQLDatabase.from_uri(DATABASE_URL)
 
 
+
 def identify_table_prompt(user_query):
     prompt = f"""
     You are a supply chain management assistant. You have access to a table called "mergedshorter" that contains comprehensive information from multiple sources about various tenders, their statuses, and related details. Use the following table schema to answer the user query.
