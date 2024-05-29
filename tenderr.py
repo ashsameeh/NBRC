@@ -138,7 +138,7 @@ def make_output(user_query):
     detailed_prompt = identify_table_prompt(user_query)
     agent_executor = create_sql_agent(llm, db=db, verbose=True)
     result = agent_executor.invoke(detailed_prompt)
-    # final_answer = result['output']
+    final_answer = result['output']
     return final_answer
 
 
