@@ -110,9 +110,8 @@ def identify_table_prompt(user_query):
 
     User Query: "{user_query}"
 
-    Thought: I need to query the 'merged_data' table to find the relevant information.
-    Action: SQL Query
-    Action Input: A query to fetch the required details from the database.
+    Thought: I need to query the 'mergedshorter' table to find the relevant information.
+    Action: Generate a SQL Query
     Observation: The result of the query will provide the answer to the user's question.
     Provide the response in a human-readable format without technical jargon.
     
