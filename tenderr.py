@@ -1,16 +1,10 @@
 from langchain_community.agent_toolkits import create_sql_agent
-# from langchain.agents import create_sql_agent
-# from langchain.llms import OpenAI
 from langchain_openai import ChatOpenAI
 from langchain_community.utilities import SQLDatabase
-# from langchain.chains.sql_database import SQLDatabase
-# from langchain.utilities import SQLDatabase
-# from langchain.agents.agent_toolkits import SQLDatabaseToolkit
 import openai
 import os
 import streamlit as st
-# from sqlalchemy import create_engine
-# from sqlalchemy.orm import sessionmaker
+
 
 
 # openai.api_key = os.getenv("OPENAI_API_KEY")
